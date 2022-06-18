@@ -97,13 +97,21 @@ func image_handler(res http.ResponseWriter, req *http.Request) {
 	reqImg.Body.Close()
 }
 
+// Sets headers for API responses
+func setupResponse(w *http.ResponseWriter, req *http.Request) {
+	(*w).Header().Set("Content-Type", "application/json")
+	(*w).Header().Set("Access-Control-Allow-Origin", "*")
+	(*w).Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
+	(*w).Header().Set("Access-Control-Allow-Headers", "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization")
+}
+
 // HTTP hander for the APOD info route
 func apod_handler(w http.ResponseWriter, r *http.Request) {
+	setupResponse(&w, r)
 	results, reqErr := make_request()
 	if reqErr != nil {
 		http.Error(w, "API Error: "+reqErr.Error(), 400)
 	}
-	w.Header().Set("Content-Type", "application/json")
 	fmt.Fprintf(w, string(results))
 }
 
