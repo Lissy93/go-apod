@@ -119,6 +119,6 @@ func main() {
 	port := ":" + get_env("PORT", "8080")
 	http.HandleFunc("/apod", apod_handler)
 	http.HandleFunc("/image", image_handler)
-	// http.Handle("/", http.FileServer(http.Dir("static")))
+	http.Handle("/", http.FileServer(http.Dir("static")))
 	http.ListenAndServe(port, nil)
 }
