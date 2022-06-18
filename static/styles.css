@@ -1,0 +1,116 @@
+:root {
+  --primary: #A838FF;
+  --textColor: #F3F3F3;
+  --bgLighter: #2c2c2d;
+  --bgDarker: #1f1f20;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Ranchers&display=swap');
+
+body {
+  background: var(--bgDarker);
+  font-family: 'Gentium Plus', serif;
+  color: var(--textColor);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1, h2 {
+  filter: drop-shadow(2px 2px #1e1e1e);
+  font-family: 'Kanit', sans-serif;
+  background: linear-gradient(to bottom right, #534EE1, #A532F4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a {
+  font-family: 'Kanit', sans-serif;
+  text-shadow: 2px 2px 4px #1a1a1a;
+}
+
+h1.main-title {
+  margin: 0.5rem auto;
+  font-size: 3rem;
+}
+
+section.today-wrapper {
+  background: var(--bgLighter);
+  width: fit-content;
+  max-width: 750px;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 2px 2px 4px #1a1a1a;
+}
+
+.today-wrapper img.apod-picture{
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px #1a1a1a;
+}
+
+.apod-info {
+  text-align: left;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: calc(500px - 2rem);
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px #1a1a1a;
+  background: #1f1f20b3;
+}
+
+.apod-info h2 {
+  margin: 0;
+  color: var(--primary);
+}
+
+.apod-info p.meta-wrap {
+  margin: 0;
+}
+
+.apod-info p#apod-explanation {
+  margin: 0;
+  font-style: italic;
+}
+
+.apod-info span#apod-date,
+.apod-info span#apod-copyright {
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+a#apod-hd-link {
+  background-image: linear-gradient(to right, #4751E6 0%, #844BDD 51%, #423CF4 100%);
+  margin: 0.5rem 0;
+  padding: 1rem 2rem;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: var(--textColor);
+  box-shadow: 2px 2px 4px #1a1a1a;
+  border-radius: 8px;
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a#apod-hd-link:hover {
+  box-shadow: 6px 6px 12px #1a1a1a;
+  background-position: right center;
+  color: var(--textColor);
+  text-decoration: none;
+}
+
+
+body {
+  background-color: #1f1f20;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232c2c2d' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}

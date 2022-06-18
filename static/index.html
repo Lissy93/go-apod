@@ -1,0 +1,35 @@
+
+<!doctype html>
+<html>
+<head>
+  <title>Go-APOD</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Kanit:wght@800&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="script.js"></script>
+</head>
+<body>
+  <main>
+    <section class="today-wrapper">
+      <h1 class="main-title">Astronomy Picture of the Day</h1>
+      <img
+        class="apod-picture"
+        src="https://go-apod.herokuapp.com/image"
+        alt="Astronomy Picture of the Day"
+      />
+      <div class="apod-info">
+        <h2 id="apod-title"></h2>
+        <p class="meta-wrap">
+          <span id="apod-date"></span>
+          <span id="apod-copyright"></span>
+        </p>
+        <p id="apod-explanation"></p>
+        <a id="apod-hd-link"></a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
