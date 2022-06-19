@@ -13,6 +13,22 @@
 </head>
 <body>
   <main>
+    <section class="link-wrapper">
+      <a href="https://github.com/lissy93/go-apod" class="link-to">
+        <p class="link-title">View on GitHub</p>
+        <div class="link-sub-wrap">
+          <img src="assets/icons/github.svg" class="link-icon" />
+          <p class="link-description">View and edit source code, or deploy your own instance</p>
+        </div>
+      </a>
+      <a href="api-docs.html" class="link-to">
+        <p class="link-title">API Docs</p>
+        <div class="link-sub-wrap">
+          <img src="assets/icons/api-docs.svg" class="link-icon" />
+          <p class="link-description">A free, no-auth, CORS-enabled API for easily fetching APOD</p>
+        </div>
+      </a>
+    </section>
     <section class="today-wrapper">
       <h1 class="main-title">Astronomy Picture of the Day</h1>
       <img
@@ -23,8 +39,7 @@
       />
       <iframe class="apod-iframe" id="apod-dynamic-content"></iframe>
       <div id="loader">
-        
-        <img src="assets/loader.svg" class="loader-svg" />
+        <img src="assets/icons/loader.svg" class="loader-svg" />
         <p class="loader-text">Loading...</p>
       </div>
       <div class="apod-info">
