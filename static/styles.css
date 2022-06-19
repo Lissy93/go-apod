@@ -1,13 +1,18 @@
 :root {
-  --primary: #A838FF;
+  --primary: #8120F7;
   --textColor: #F3F3F3;
   --bgLighter: #2c2c2d;
   --bgDarker: #1f1f20;
+  --primaryLight: #B174FB;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Ranchers&display=swap');
+::selection {
+  color: var(--bgDarker);
+  background: var(--primary);
+}
 
 body {
+  margin: 0;
   background: var(--bgDarker);
   font-family: 'Gentium Plus', serif;
   color: var(--textColor);
@@ -20,7 +25,7 @@ main {
   align-items: center;
 }
 
-h1, h2 {
+h1, h2, p.loader-text {
   filter: drop-shadow(2px 2px #1e1e1e);
   font-family: 'Kanit', sans-serif;
   background: linear-gradient(to bottom right, #534EE1, #A532F4);
@@ -29,8 +34,8 @@ h1, h2 {
 }
 
 a {
-  font-family: 'Kanit', sans-serif;
   text-shadow: 2px 2px 4px #1a1a1a;
+  color: var(--primaryLight);
 }
 
 h1.main-title {
@@ -49,11 +54,19 @@ section.today-wrapper {
   box-shadow: 2px 2px 4px #1a1a1a;
 }
 
-.today-wrapper img.apod-picture{
+.today-wrapper img.apod-picture,
+.today-wrapper iframe.apod-iframe {
   width: 100%;
   max-width: 500px;
   border-radius: 8px;
   box-shadow: 2px 2px 4px #1a1a1a;
+}
+
+.today-wrapper iframe.apod-iframe {
+  display: none;
+  margin: 0 auto;
+  min-height: 500px;
+  border: none;
 }
 
 .apod-info {
@@ -64,6 +77,7 @@ section.today-wrapper {
   border-radius: 8px;
   box-shadow: 2px 2px 4px #1a1a1a;
   background: #1f1f20b3;
+  display: none;
 }
 
 .apod-info h2 {
@@ -100,6 +114,7 @@ a#apod-hd-link {
   width: fit-content;
   text-decoration: none;
   font-weight: bold;
+  font-family: 'Kanit', sans-serif;
 }
 
 a#apod-hd-link:hover {
@@ -109,8 +124,21 @@ a#apod-hd-link:hover {
   text-decoration: none;
 }
 
+footer.i-have-feet {
+  text-align: center;
+  background: var(--bgLighter);
+  font-style: italic;
+  opacity: 0.8;
+  box-shadow: 0 -2px 4px #1a1a1a;
+}
 
 body {
   background-color: #1f1f20;
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232c2c2d' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+.loader-svg {
+  width: 100px;
+  margin: 1rem auto;
 }

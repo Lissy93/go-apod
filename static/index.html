@@ -17,9 +17,16 @@
       <h1 class="main-title">Astronomy Picture of the Day</h1>
       <img
         class="apod-picture"
+        id="apod-picture"
         src="https://go-apod.herokuapp.com/image"
         alt="Astronomy Picture of the Day"
       />
+      <iframe class="apod-iframe" id="apod-dynamic-content"></iframe>
+      <div id="loader">
+        
+        <img src="assets/loader.svg" class="loader-svg" />
+        <p class="loader-text">Loading...</p>
+      </div>
       <div class="apod-info">
         <h2 id="apod-title"></h2>
         <p class="meta-wrap">
@@ -31,5 +38,9 @@
       </div>
     </section>
   </main>
+  <footer class="i-have-feet">
+    Licensed under <a href="https://github.com/Lissy93/go-apod/blob/master/LICENSE">MIT</a>,
+    © <a href="https://aliciasykes.com">Alicia Sykes</a> 2022
+  </footer>
 </body>
 </html>
