@@ -49,6 +49,7 @@ func make_request() ([]byte, error) {
 	defer response.Body.Close()
 	body, responseErr := ioutil.ReadAll(response.Body)
 
+	// Return response body and/or response error
 	return body, responseErr
 }
 
@@ -115,6 +116,7 @@ func apod_handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, string(results))
 }
 
+// Start web server
 func main() {
 	port := ":" + get_env("PORT", "8080")
 	http.HandleFunc("/apod", apod_handler)
