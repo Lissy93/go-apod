@@ -21,7 +21,7 @@
           <p class="link-description">View and edit source code, or deploy your own instance</p>
         </div>
       </a>
-      <a href="api-docs.html" class="link-to">
+      <a href="#api-docs" class="link-to">
         <p class="link-title">API Docs</p>
         <div class="link-sub-wrap">
           <img src="assets/icons/api-docs.svg" class="link-icon" />
@@ -29,7 +29,7 @@
         </div>
       </a>
     </section>
-    <section class="today-wrapper">
+    <section class="today-wrapper" id="#today">
       <h1 class="main-title">Astronomy Picture of the Day</h1>
       <img
         class="apod-picture"
@@ -44,13 +44,41 @@
       </div>
       <div class="apod-info">
         <h2 id="apod-title"></h2>
-        <p class="meta-wrap">
-          <span id="apod-date"></span>
-          <span id="apod-copyright"></span>
-        </p>
+        <p class="meta-wrap"><span id="apod-date"></span><span id="apod-copyright"></span></p>
         <p id="apod-explanation"></p>
         <a id="apod-hd-link"></a>
       </div>
+    </section>
+    <section class="api-wrapper" id="api-docs">
+      <h2>API</h2>
+      <div class="part">
+        <h3>Raw Image</h3>
+        <div class="request-wrap">
+          <span class="meth">GET</span><code>https://go-apod.herokuapp.com/image</code>
+        </div>
+        <h4 class="response-heading">Response</h4>
+        <img src="https://go-apod.herokuapp.com/image" class="response-img" />
+      </div>
+      <div class="part">
+      <h3>Full Info</h3>
+      <div class="request-wrap">
+        <span class="meth">GET</span><code>https://go-apod.herokuapp.com/apod</code>
+      </div>
+      <h4 class="response-heading">Response</h4>
+<pre class="response"><code>
+  {
+    "copyright":"island universe",
+    "date":"2018-12-28",
+    "explanation":"Barred spiral galaxy NGC 1365 is truly a majestic island universe some 200,000 light-years...",
+    "hdurl":"https://apod.nasa.gov/apod/image/1812/NGC1365_HaLRGBpugh.jpg",
+    "media_type":"image",
+    "service_version":"v1",
+    "title":"NGC 1365: Majestic Island Universe",
+    "url":"https://apod.nasa.gov/apod/image/1812/NGC1365_HaLRGBpugh1024.jpg"
+  }       
+</code></pre>
+</div>
+
     </section>
   </main>
   <footer class="i-have-feet">
