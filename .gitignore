@@ -1,0 +1,10 @@
+.vscode/
+bin/
+.env
+
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+go.work
