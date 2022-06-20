@@ -2,14 +2,35 @@
 <!doctype html>
 <html>
 <head>
+  <!-- Site Info -->
   <title>Go-APOD</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Kanit:wght@800&display=swap" rel="stylesheet"> 
+  <meta name="description" content="A free, CORS-enabled, no-auth wrapper for NASA's APOD API">
+  <meta name="keywords" content="NASA, APOD, Astronomy Picture of the Day, API, CORS, Auth, GitHub, Lissy93">
+  
+  <!-- Import Key Assets -->
   <link rel="stylesheet" type="text/css" href="styles.css" />
   <script src="script.js"></script>
+  <link rel="icon" href="assets/pwa/favicon.ico">
+  <link rel="manifest" href="assets/pwa/manifest.json">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://metatags.io/">
+  <meta property="og:title" content="Go-APOD API - Astronomy Picture of the Day">
+  <meta property="og:description" content="A free, CORS-enabled, no-auth wrapper for NASA's APOD API">
+  <meta property="og:image" content="assets/pwa/banner.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://metatags.io/">
+  <meta property="twitter:title" content="Go-APOD API - Astronomy Picture of the Day">
+  <meta property="twitter:description" content="A free, CORS-enabled, no-auth wrapper for NASA's APOD API">
+  <meta property="twitter:image" content="assets/pwa/banner.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus&family=Kanit:wght@800&display=swap" rel="stylesheet"> 
 </head>
 <body>
   <main>
@@ -54,7 +75,7 @@
       <div class="part">
         <h3>Raw Image</h3>
         <div class="request-wrap">
-          <span class="meth">GET</span><code>https://go-apod.herokuapp.com/image</code>
+          <span class="meth">GET</span><code  id="get-img">https://go-apod.herokuapp.com/image</code>
         </div>
         <h4 class="response-heading">Response</h4>
         <img src="https://go-apod.herokuapp.com/image" class="response-img" />
@@ -62,7 +83,7 @@
       <div class="part">
       <h3>Full Info</h3>
       <div class="request-wrap">
-        <span class="meth">GET</span><code>https://go-apod.herokuapp.com/apod</code>
+        <span class="meth">GET</span><code id="get-apod">https://go-apod.herokuapp.com/apod</code>
       </div>
       <h4 class="response-heading">Response</h4>
 <pre class="response"><code>

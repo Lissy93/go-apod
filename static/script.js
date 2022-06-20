@@ -7,7 +7,6 @@ const makeRequest = () => {
   fetch(apiUrl)
   .then(response => response.json())
   .then(data => {
-    console.log(data);
     hideLoader();
     updateDom(data);
   })
@@ -54,5 +53,16 @@ const updateDom = (apod) => {
   }
 }
 
+/* Updates API docs with endpoint based on hostname */
+const setApiEndPoints = () => {
+  const hostname = window.location.host || 'go-apod.herokuapp.com';
+  document.getElementById('get-apod').innerText = `https://${hostname}/apod`;
+  document.getElementById('get-img').innerText = `https://${hostname}/image`;
+}
 
-makeRequest();
+
+/* When page has loaded, make request then update the DOM  */
+document.addEventListener('DOMContentLoaded', (e) => {
+  makeRequest();
+  setApiEndPoints();
+});
