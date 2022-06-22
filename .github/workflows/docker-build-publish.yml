@@ -38,7 +38,9 @@ jobs:
           ${{ env.DH_IMAGE }}
           ghcr.io/${{ env.GH_IMAGE }}
         tags: |
-          type=ref,event=tag,prefix=release-,suffix={{tag}}
+          type=raw,value=latest,enable={{is_default_branch}}
+          type=ref,event=branch
+          type=ref,event=tag
         labels: |
           maintainer=Lissy93
           org.opencontainers.image.title=APOD
