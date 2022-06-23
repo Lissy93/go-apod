@@ -1,9 +1,18 @@
 
+/* API endpoint paths, using either current server or public instance */
+const makeEndpointUrls = () => {
+  const hostname = window.location.origin || 'go-apod.herokuapp.com';
+  return {
+    home: hostname,
+    apod: `${hostname}/apod`,
+    image: `${hostname}/image`,
+  };
+};
+
 
 /* Fetch data from APOD API */
 const makeRequest = () => {
-  const apiUrl = 'https://go-apod.herokuapp.com/apod';
-
+  const apiUrl = makeEndpointUrls().apod;
   fetch(apiUrl)
   .then(response => response.json())
   .then(data => {
@@ -55,11 +64,10 @@ const updateDom = (apod) => {
 
 /* Updates API docs with endpoint based on hostname */
 const setApiEndPoints = () => {
-  const hostname = window.location.host || 'go-apod.herokuapp.com';
-  document.getElementById('get-apod').innerText = `https://${hostname}/apod`;
-  document.getElementById('get-img').innerText = `https://${hostname}/image`;
+  const { apod, image } = makeEndpointUrls();
+  document.getElementById('get-apod').innerText = apod;
+  document.getElementById('get-img').innerText = image;
 }
-
 
 /* When page has loaded, make request then update the DOM  */
 document.addEventListener('DOMContentLoaded', (e) => {
