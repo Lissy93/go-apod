@@ -1,0 +1,30 @@
+---
+# Welcome to Go-APOD! To get started, run `docker compose up -d`
+# You can configure your container here, by modifying this file
+# See GH repo for more info: https://github.com/lissy93/go-apod
+# Licensed under MIT © Alicia Sykes 2022 <https://aliciasykes.com>
+
+version: "3.8"
+services:
+  dashy:
+    container_name: APOD
+
+    # Pull latest image from DockerHub
+    image: lissy93/apod
+
+    # To build from source, replace 'image: lissy93/go-apod' with 'build: .'
+    # build: .
+
+    # Set port that the app will be served on. Keep second option, container port as 8080
+    ports:
+      - 8080:8080
+
+    # Specify your API key, and any other env vars
+    environment:
+      - NASA_API_KEY=''
+    # Specify your user ID and group ID. You can find this by running `id -u` and `id -g`
+    #  - UID=1000
+    #  - GID=1000
+
+    # Specify restart policy
+    restart: unless-stopped
