@@ -181,5 +181,6 @@ func main() {
 		log.Fatal(err)
 	}
 
+	fmt.Println("\033[1;92m🌌 Go-APOD running at http://localhost:" + conf.Port + "/\033[0m")
 	log.Fatal(http.ListenAndServe(":"+conf.Port, newServer(&conf).routes()))
 }
