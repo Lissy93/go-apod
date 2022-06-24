@@ -4,7 +4,7 @@
 
 <p align="center">
   <i>A CORS-enabled, no-auth wrapper to NASA's Astronomy Picture of the Day </i><br>
-  <b>Public API: <a href="https://go-apod.herokuapp.com/">go-apod.herokuapp.com</a></b>
+  <b>🌌 Public API: <a href="https://go-apod.herokuapp.com/">go-apod.herokuapp.com</a></b>
 </p>
 
 
@@ -59,54 +59,55 @@ GET https://go-apod.herokuapp.com/apod
 
 ## Deployment
 
+> _Go-APOD can be self-hosted, either with Docker, via the 1-click Heroku deployment, or by running the executable directly._<br>
+> A NASA API Key is required, which you can sign up for at [api.nasa.gov](https://api.nasa.gov/).
+
 ### Heroku
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Lissy93/go-apod)
 
 ### Docker
-
-A Docker image is available on DockerHub, under [`lissy93/apod`](https://hub.docker.com/r/lissy93/apod), or [GHCR](https://github.com/Lissy93/go-apod/pkgs/container/go-apod).
+A multi-arch container is available on DockerHub, under [`lissy93/apod`](https://hub.docker.com/r/lissy93/apod), or GHCR  as [`ghcr.io/lissy93/go-apod`](https://github.com/Lissy93/go-apod/pkgs/container/go-apod).<br> Or, use this [`docker-compose.yml`](https://github.com/Lissy93/go-apod/blob/master/docker-compose.yml) template, and just populate with your API key and run `docker compose up`.
 
 ```bash
 docker run -p 8080:8080 -e NASA_API_KEY='XXX' -d lissy93/apod
 ```
 
-Or, use this [`docker-compose.yml`](https://github.com/Lissy93/go-apod/blob/master/docker-compose.yml) template, and just populate with your API key and run `docker compose up`.
-
 ### From Executable
 
-Download the compiled app for your system from the [Releases Page](https://github.com/Lissy93/go-apod/releases), then open / execute it, passing in `NASA_API_KEY` as an environmental variable. The app should now be running on port 8080 / or your specified port.
+Each release has pre-compiled binaries attached for Windows, Mac and Linux, which can be run directly.
+From the [Releases Page](https://github.com/Lissy93/go-apod/releases), download and extract the version for your system, then execute it with: `NASA_API_KEY='XXX' ./go-apod`
 
 ### From Source
 
-Follow the instructions below, using `go build` to generate a binary for your system.
+See the [Building Locally](#building-locally) section below
 
 ---
 
 
-## Building and Running
+## Building Locally
 
-#### Setup
-If you haven't already done so, you'll need to [install Go Lang](https://go.dev/doc/install).
-
-Then clone the repo `git clone https://github.com/Lissy93/go-apod.git && cd go-apod`
+> If you haven't already done so, you'll need to [install Go Lang](https://go.dev/doc/install).<br>
+> Then clone the repo `git clone https://github.com/Lissy93/go-apod.git && cd go-apod`
 
 
-#### Build / Run
-- Development - `go run main.go`
-- Production - `go build -o bin/apod main.go`
-- Testing - `go test`
+### Commands
+- Run Directly > `go run .`
+- Compile App > `go build`
+- Run Tests > `go test`
 
-#### Environmental Variables
+### Environmental Variables
 
 - `NASA_API_KEY` (Required) - Your API Key, you can sign up for one at [api.nasa.gov](https://api.nasa.gov/)
 - `PORT` (Optional) - The port to start the web server on, defaults to `8080`
+- `CORS_ALLOWED_ORIGINS` (Optional) - List of origins which can use the API, defaults to `*` / all
+- `NASA_BASE_URL` (Optional) - The base URL upstream GET requests, defaults to NASA's APOD API
 
 ---
 
 ## App
 
-There's also a simple web app included, which can be self-hosted or accessed below, which displays today's image and info.
+> A simple web app which displays today's image and info is also included. It can either be self-hosted or accessed below.
 
 <p align="center">
   <a href="https://apod.as93.net">
