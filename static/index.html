@@ -35,6 +35,7 @@
 </head>
 <body>
   <main>
+    <!-- Links to GH and API docs -->
     <section class="link-wrapper">
       <a href="https://github.com/lissy93/go-apod" class="link-to">
         <p class="link-title">View on GitHub</p>
@@ -51,6 +52,7 @@
         </div>
       </a>
     </section>
+    <!-- Todays image and description -->
     <section class="today-wrapper" id="#today">
       <h1 class="main-title">Astronomy Picture of the Day</h1>
       <img
@@ -64,6 +66,10 @@
         <img src="assets/icons/loader.svg" class="loader-svg" />
         <p class="loader-text">Loading...</p>
       </div>
+      <div id="error">
+        <p class="err-title">Error Fetching Data from NASA</p>
+        <p id="err-msg">Check the console for more info</p>
+      </div>
       <div class="apod-info">
         <h2 id="apod-title"></h2>
         <p class="meta-wrap"><span id="apod-date"></span><span id="apod-copyright"></span></p>
@@ -71,6 +77,7 @@
         <a id="apod-hd-link"></a>
       </div>
     </section>
+    <!-- API docs -->
     <section class="api-wrapper" id="api-docs">
       <h2>API</h2>
       <div class="part">
@@ -87,7 +94,7 @@
         <span class="meth">GET</span><code id="get-apod">https://go-apod.herokuapp.com/apod</code>
       </div>
       <h4 class="response-heading">Response</h4>
-<pre class="response"><code>
+<pre id="response"><code>
   {
     "copyright":"island universe",
     "date":"2018-12-28",
