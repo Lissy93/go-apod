@@ -18,4 +18,4 @@ COPY --from=build /app/apod ./
 # Specify internal port
 EXPOSE 8080
 # Run the built app!
-CMD ["./apod"]  
+CMD [ "./apod" ]
