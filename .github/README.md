@@ -8,6 +8,28 @@
 </p>
 
 
+<details>
+<summary><b>Contents</b></summary>
+
+- [API Usage](#api-usage)
+  - [`/apod`](#apod)
+  - [`/image`](#image)
+- [Deployment](#deployment)
+  - [Heroku](#heroku)
+  - [Docker](#docker)
+  - [Executable](#from-executable)
+  - [From Source](#from-source)
+- [Development](#building-locally)
+  - [Project Commands](#commands)
+  - [Configuration Options](#environmental-variables)
+- [Frontend App](#app)
+- [Contributing](#contributing)
+- [License](#license)
+
+</details>
+
+---
+
 ## API Usage
 
 
@@ -107,16 +129,51 @@ See the [Building Locally](#building-locally) section below
 
 ## App
 
-> A simple web app which displays today's image and info is also included. It can either be self-hosted or accessed below.
+> The service also includes an optional simple web app, which can be used to show todays image and associated information from the API.
 
 <p align="center">
   <a href="https://apod.as93.net">
-    <img width="500" src="https://api.apiflash.com/v1/urltoimage?access_key=64850d88f6c645b3a144a493e725f769&url=https%3A%2F%2Fgo-apod.herokuapp.com%2F&format=webp&width=770&height=770&ttl=86400&response_type=image&wait_until=page_loaded&css=.link-wrapper%7Bdisplay%3Anone%3B%7D" />
+    <img width="500" title="Live preview of apod.as93.net" src="https://api.apiflash.com/v1/urltoimage?access_key=64850d88f6c645b3a144a493e725f769&url=https%3A%2F%2Fgo-apod.herokuapp.com%2F&format=webp&width=770&height=770&ttl=86400&response_type=image&wait_until=page_loaded&css=.link-wrapper%7Bdisplay%3Anone%3B%7D" />
   </a>
 </p>
 
 ---
 
+## Contributing
+
+Contributions of any type are welcome :)
+
+To get started, fork the project, clone your fork, then add, commit and push your changes before submitting a PR back to this repo. If you're new to GitHub, these [docs](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) may help. For build instructions, see the [Building Locally](#building-locally) section.
+
+Please be sure to follow the [Contributor Covenant Code of Conduct](/.github/CODE_OF_CONDUCT.md).
+
+---
+
 ## License
 
-Licensed under [MIT](https://github.com/Lissy93/go-apod/blob/master/LICENSE), © [Alicia Sykes](https://aliciasykes.com) 2022
+Go-APOD is licensed under MIT, © [Alicia Sykes](https://aliciasykes.com) 2022.
+
+<sup>For information, see [TLDR Legal > MIT](https://tldrlegal.com/license/mit-license)</sup>
+
+
+```
+The MIT License (MIT)
+Copyright (c) Alicia Sykes <alicia@omg.com> 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy 
+of this software and associated documentation files (the "Software"), to deal 
+in the Software without restriction, including without limitation the rights 
+to use, copy, modify, merge, publish, distribute, sub-license, and/or sell 
+copies of the Software, and to permit persons to whom the Software is furnished 
+to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included install 
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANT ABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
