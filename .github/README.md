@@ -68,7 +68,7 @@ GET https://go-apod.herokuapp.com/apod
 
 ```html
 <img
-  src="https://go-apod.herokuapp.com/image"
+  src="https://apod.as93.net/image"
   alt="Astronomy Picture of the Day"
   width="350"
 />
@@ -76,14 +76,18 @@ GET https://go-apod.herokuapp.com/apod
 
 **Response**
 
-<img src="https://go-apod.herokuapp.com/image" alt="Astronomy Picture of the Day" width="350" />
+<img src="https://apod.as93.net/image" alt="Astronomy Picture of the Day" width="350" />
 
 ---
 
 ## Deployment
 
-> _Go-APOD can be self-hosted, either with Docker, via the 1-click Heroku deployment, or by running the executable directly._<br>
+> _Go-APOD can be self-hosted, either with Docker, via the 1-click Vercel or Heroku deployment, or by running the executable directly._<br>
 > A NASA API Key is required, which you can sign up for at [api.nasa.gov](https://api.nasa.gov/).
+
+### Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FLissy93%2Fgo-apod&env=NASA_API_KEY&envDescription=Your%20NASA%20API%20key.%20It's%20free%2C%20get%20it%20at%20https%3A%2F%2Fapi.nasa.gov&envLink=https%3A%2F%2Fapi.nasa.gov&project-name=apod&repository-name=go-apod&demo-title=Go-APOD&demo-description=A%20demo%20is%20published%20to%20apod.as93.net&demo-url=https%3A%2F%2Fapod.as93.net%2F&demo-image=https%3A%2F%2Fraw.githubusercontent.com%2FLissy93%2Fgo-apod%2Fmaster%2Fstatic%2Fassets%2Fpwa%2Fapple-touch-icon.png)
 
 ### Heroku
 
@@ -193,7 +197,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   <sup>Thanks for visiting :)</sup>
 </p>
 
-<!-- Dinosaur -->
+<!-- Dinosaurs are Awesome -->
 <!-- 
                         . - ~ ~ ~ - .
       ..     _      .-~               ~-.
