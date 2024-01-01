@@ -138,7 +138,8 @@ See the [Building Locally](#building-locally) section below
 
 <p align="center">
   <a href="https://apod.as93.net">
-    <img width="500" title="Live preview of apod.as93.net" src="https://api.apiflash.com/v1/urltoimage?access_key=64850d88f6c645b3a144a493e725f769&url=https%3A%2F%2Fgo-apod.herokuapp.com%2F&format=webp&width=770&height=770&ttl=86400&response_type=image&wait_until=page_loaded&css=.link-wrapper%7Bdisplay%3Anone%3B%7D" />
+  <img src="https://i.ibb.co/rvCfrbn/go-apod-screenshot.png" width="600" />
+<!--     <img width="500" title="Live preview of apod.as93.net" src="https://api.apiflash.com/v1/urltoimage?access_key=64850d88f6c645b3a144a493e725f769&url=https%3A%2F%2Fgo-apod.herokuapp.com%2F&format=webp&width=770&height=770&ttl=86400&response_type=image&wait_until=page_loaded&css=.link-wrapper%7Bdisplay%3Anone%3B%7D" /> -->
   </a>
 </p>
 
