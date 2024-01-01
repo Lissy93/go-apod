@@ -8,3 +8,7 @@ bin/
 *.so
 *.dylib
 go.work
+
+.vercel
+
+node_modules/
